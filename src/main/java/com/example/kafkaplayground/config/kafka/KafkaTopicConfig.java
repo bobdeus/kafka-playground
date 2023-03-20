@@ -8,7 +8,7 @@ import org.springframework.kafka.config.TopicBuilder;
 @Configuration
 public class KafkaTopicConfig {
 
-    @Bean
+    @Bean(name = "bob")
     public NewTopic topic() {
         return TopicBuilder.name("topic-1")
                 .partitions(10)

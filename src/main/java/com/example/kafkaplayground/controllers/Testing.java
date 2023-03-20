@@ -17,7 +17,7 @@ public class Testing {
 
     @PostMapping(value = "/message")
     public String greeting(@RequestParam(name = "message_data", defaultValue = "") String message) {
-        this.template.send("topic1", "theKey-topic1", message);
+        this.template.send("topic-1", "theKey-topic1", message);
         this.template.send("my-topic", "theKey-my-topic", message);
         return message;
     }
